@@ -6,8 +6,7 @@ import (
 	"io"
 	"log"
 	"os"
-
-	"github.com/go-gota/gota/dataframe"
+	//"github.com/go-gota/gota/dataframe"
 )
 
 func main() {
@@ -32,27 +31,25 @@ func main() {
 		fmt.Println(record)
 	}
 
-	//Method 2 using package (gota,qframes,dataframe.go)
-
-	df := dataframe.ReadCSV(csvFile)
-	fmt.Println(df)
-
-	//Shape of Dataset
-	row, col := df.Dims()
-	fmt.Println("Shape of DF:", row, col)
-
-	// Get Only Row Size
-	fmt.Println(df.Nrow())
-
-	// Get only Columns Size
-	fmt.Println(df.Ncol())
-
-	// Get Column Names
-	fmt.Println(df.Names())
-
-	// Get DataTypes
-	fmt.Println(df.Types())
-
-	//Describe/Summary
-	fmt.Println("Summary", df.Describe())
 }
+
+// //Method 2 using package (gota,qframes,dataframe.go)
+
+// //Shape of Dataset
+// row, col := record.Dims()
+// fmt.Println("Shape of DF:", row, col)
+
+// // Get Only Row Size
+// fmt.Println(df.Nrow())
+
+// // Get only Columns Size
+// fmt.Println(df.Ncol())
+
+// // Get Column Names
+// fmt.Println(df.Names())
+
+// // Get DataTypes
+// fmt.Println(df.Types())
+
+// //Describe/Summary
+// fmt.Println("Summary", df.Describe())
