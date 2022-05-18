@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const url = "https://lco.dev/"
+const url = "https://lco.dev"
 
 func main() {
 	fmt.Println("LCO web request")
@@ -19,13 +19,14 @@ func main() {
 
 	fmt.Printf("Response is of type: %T\n", response)
 
-	defer response.Body.close()
+	defer response.Body.Close()
 
 	databytes, err := ioutil.ReadAll(response.Body)
 
 	if err != nil {
 		panic(err)
 	}
+
 	content := string(databytes)
 	fmt.Println(content)
 }
